@@ -48,12 +48,14 @@ public class Download  implements Parcelable{
 
         dest.writeInt(progress);
         dest.writeInt(currentFileSize);
+        dest.writeInt(totalFileSize);
     }
 
     private Download(Parcel in) {
 
         progress = in.readInt();
         currentFileSize = in.readInt();
+        totalFileSize = in.readInt();
     }
 
     public static final Parcelable.Creator<Download> CREATOR = new Parcelable.Creator<Download>() {
