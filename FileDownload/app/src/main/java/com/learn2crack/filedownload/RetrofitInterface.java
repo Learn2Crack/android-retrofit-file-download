@@ -7,7 +7,7 @@ import retrofit2.http.Streaming;
 
 public interface RetrofitInterface {
 
-    @GET("download/Node-Android-Chat.zip")
+    @GET("files/Node-Android-Chat.zip")
     @Streaming
     Call<ResponseBody> downloadFile();
 }
